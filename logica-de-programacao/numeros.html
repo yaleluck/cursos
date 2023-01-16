@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <script>
+
+        function lineSpace() {
+            document.write("<br><br>");
+        }
+
+        function show(phrase) {
+            document.write(phrase);
+            lineSpace();
+        }
+
+        var loginCadastrado = "alura";
+        var senhaCadastrada = "alura321";
+
+        var meter = 1;
+
+        while (meter <= 3) {
+            var loginInformado = prompt("Informe seu login");
+            var senhaInformada = prompt("Informe sua senha");
+
+            if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+                alert("Bem-vindo ao sistema " + loginInformado);
+                meter = 4;
+            } else if (meter == 3) {
+                alert("Número máximo de tentativas atingido!")
+            } 
+            else {
+                alert("Login inválido. Tente novamente")
+            }
+            meter += 1;
+        }
+        
+    </script>
+
+</body>
+</html>

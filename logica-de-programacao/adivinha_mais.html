@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha Mais</title>
+</head>
+<body>
+    <input>
+    <button>Compare com o meu segredo!</button>
+    <script>  
+        function randomNumber() {
+            return Math.round(Math.random() * 10);
+        }
+
+        function createListOfNumbers(n) {
+            var secrets = [];
+
+            for (i = 0; i < n; i++) {
+                var number = randomNumber();
+
+                if (number !== 0) {
+                    var found = false;
+
+                    for (i = 0; i < secrets.length; i++) {
+                        if (number == secrets[i]) {
+                            var found = true;
+                            break;
+                        }
+                    }
+
+                    if (found == false) {
+                        secrets.push(number);
+                    }
+                }
+                
+            }
+
+            return secrets;
+        }
+        var secrets = createListOfNumbers(5);     
+        console.log(secrets);
+
+        var input = document.querySelector("input");
+        input.focus();
+
+        var button = document.querySelector("button");
+
+        function verification () {
+            var found = false;
+
+            for(i = 0; i < secrets.length; i++) {
+                if (input.value == secrets[i]) {
+                    alert("Você acertou!");
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found == false) {
+                alert("Você errou!");
+            }
+
+            input.value = "";
+            input.focus();
+        }
+
+        button.onclick = verification;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Adivinhação</title>
+</head>
+<body>
+    <script>
+
+        function lineSpace() {
+            document.write("<br>");
+        }
+
+        function show(phrase) {
+            document.write(phrase);
+            lineSpace();
+        }
+
+        function sortNumber(n) {
+           return Math.round(Math.random()*n);
+        }
+
+        var gameNumber = sortNumber(10);
+        
+        var number = 1;
+
+        while (number <= 3) {
+            var playerNumber = parseInt(prompt("Qual o número que o computador escolheu?"));
+
+            if (playerNumber === gameNumber) {
+                alert("Parabéns, você acertou!");
+                break;
+            } else if (playerNumber < gameNumber) {
+                alert("Infelizmente você errou. O número escolhido era maior do que " + playerNumber + ".");
+            } else {
+                alert("Infelizmente você errou. O número escolhido era menor do que " + playerNumber + ".");
+            }
+            number++;
+        }
+    
+
+    </script>
+
+</body>
+</html>

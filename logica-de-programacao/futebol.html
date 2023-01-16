@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+</head>
+<body>
+    <script>
+
+        function lineSpace() {
+            document.write("<br>");
+        }
+
+        function show(phrase) {
+            document.write(phrase);
+            lineSpace();
+        }
+
+        var victories = parseInt(prompt("Quantas vezes o seu time venceu?"));
+        var draws = parseInt(prompt("Quantas vezes o seu time empatou?"));
+        var totalScore = (victories * 3) + draws;
+        show("O seu time pontuou " + totalScore + " pontos.")
+
+        if (totalScore === 20) {
+            show("O seu time foi igual ao ano passado.")
+        }
+
+        if (totalScore > 20) {
+            show("O seu time foi melhor do que o ano passado.")
+        }
+
+        if (totalScore < 20) {
+            show("O seu time foi pior do que o ano passado.")
+        }
+
+    </script>
+
+</body>
+</html>

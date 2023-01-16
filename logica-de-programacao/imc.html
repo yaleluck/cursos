@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <script>
+
+        function lineSpace() {
+            document.write("<br>");
+        }
+
+        function show(phrase) {
+            document.write(phrase);
+            lineSpace();
+        }
+
+        function calculateImc(weight, height) {
+            var imc = weight / (height * height);
+            return imc;
+        }
+
+        var userName = prompt("Informe o seu nome:");
+        var userWeight = prompt(userName + ", informe o seu peso:");
+        var userHeight = prompt(userName + ", informe a sua altura:");
+        var calculatedImc = calculateImc(userWeight, userHeight);
+        show("Olá " + userName + ", o seu IMC é " + Math.round(calculatedImc) + ".");
+
+        if(calculatedImc < 18.5) {
+            show("Você está abaixo do recomendado.");
+        }
+
+        if(calculatedImc > 35) {
+            show("Você está acima do recomendado.");
+        }
+
+        if(calculatedImc >= 18.5 && calculatedImc <= 35) {
+            show("Seu IMC está dentro da normalidade.");
+        }
+
+    </script>
+
+</body>
+</html>

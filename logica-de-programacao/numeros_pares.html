@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+</head>
+<body>
+    <script>
+
+        function lineSpace() {
+            document.write("<br><br>");
+        }
+
+        function show(phrase) {
+            document.write(phrase);
+            lineSpace();
+        }
+
+        function sortNumber(n) {
+           return Math.round(Math.random()*n);
+        }
+
+        show("Os números pares de 1 a 100 são:");
+        
+        var number = 2
+
+        while (number <= 100) {
+            show("O número " + number + " é par.");
+            number += 2;
+        }
+
+        show("FIM.");
+
+
+    </script>
+
+</body>
+</html>

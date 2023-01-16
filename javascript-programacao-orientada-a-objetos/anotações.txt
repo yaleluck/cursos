@@ -1,0 +1,11 @@
+SOLID
+
+- S = Single responsibility principle (princípio da responsabilidade única): as classes devem conter funcionalidades referentes apenas às informações da própria classe para evitar acoplamento. As funcionalidades que realizam operações com as propriedades das classes devem ser feitas separadamente (ou criadas classes específicas para essas operações)
+
+- O = Open/closed principle (princípio do aberto/fechado): a classe tem que estar "aberta" para ser expandida porém "fechada" para ser modificada. Deve ser possível adicionar funcionalidades a uma classe porém sem alterar os métodos em funcionamento de uma classe já existente.
+
+- L = Liskov substitution principle (princípo da substituição de Liskov): se existir uma subsclasse e uma superclasse, deveria ser possível substituir uma pela outra sem "quebrar o código". Se uma classe possui um atributo, a subclasse também deve possuir. Se algo funciona na superclasse, esse mesmo algo deve funcionar para a subclasse.
+
+- I = Interface segregation principle (princípio da segregação de interface): não se deve impor a implementação de funcionalidades (métodos) que não serão necessárias.
+
+- D = Dependecy inversion principle (princípio da inversão de dependência): módulos em níveis mais acima da hierarquia de classes não devem depender de níveis hierarquicos menores.
